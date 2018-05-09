@@ -1,7 +1,163 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jQuery.FbMessenger demo</title>
+
+		<style>
+			body, html {
+				margin: 0;
+				padding: 0;
+				background: #fff;
+			}
+			div.vcenter {
+				margin: 5vh auto 0;
+				height: 85vh;
+				width: 100%;
+				text-align: center;
+			}
+			div.iphone-wrapper {
+				display: inline-block;
+				width: auto;
+				height: 100%;
+				position: relative;
+			}
+			div.iphone-wrapper > img {
+				height: 100%;
+				width: auto;
+				display: block;
+			}
+			div.screen-content {
+				position: absolute;
+				top: 10.8985%;
+				bottom: 20%;
+				left: 14.65%;
+				right: 16.8%;
+				background: #000;
+				border-radius: 3px;
+				overflow: hidden;
+			}
+			div.github-buttons, div.botpreview-link {
+				text-align: center;
+				margin-bottom: 1em;
+				font-family: 'Avenir', Helvetica, sans-serif;
+			}
+			div.github-buttons iframe {
+				margin-right: 2em;
+			}
+		</style>
+
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="https://rawgit.com/digitalbreed/jquery.fbmessenger/develop/dist/jquery.fbmessenger.min.js"></script>
+		<link rel="stylesheet" href="https://rawgit.com/digitalbreed/jquery.fbmessenger/develop/dist/jquery.fbmessenger.css">
+
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+	</head>
+	<body>
+		<div class="vcenter">
+			<div class="iphone-wrapper">
+				<img alt="iPhone 6 white" src="https://botpreview.com/assets/images/iphone6s-white.png" />
+				<div class="screen-content">
+				</div>
+			</div>
+		</div>
+		<div class="github-buttons">
+			<a class="github-button" href="https://github.com/digitalbreed/jquery.fbmessenger" data-icon="octicon-eye" data-count-href="/digitalbreed/jquery.fbmessenger/watchers" data-count-api="/repos/digitalbreed/jquery.fbmessenger#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch digitalbreed/jquery.fbmessenger on GitHub">Watch</a>
+			<a class="github-button" href="https://github.com/digitalbreed/jquery.fbmessenger" data-icon="octicon-star" data-count-href="/digitalbreed/jquery.fbmessenger/stargazers" data-count-api="/repos/digitalbreed/jquery.fbmessenger#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star digitalbreed/jquery.fbmessenger on GitHub">Star</a>
+			<a class="github-button" href="https://github.com/digitalbreed/jquery.fbmessenger/issues" data-icon="octicon-issue-opened" data-count-api="/repos/digitalbreed/jquery.fbmessenger#open_issues_count" data-count-aria-label="# issues on GitHub" aria-label="Issue digitalbreed/jquery.fbmessenger on GitHub">Issue</a>
+			<a class="github-button" href="https://github.com/digitalbreed/jquery.fbmessenger/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download digitalbreed/jquery.fbmessenger on GitHub">Download</a>
+		</div>
+		<div class="botpreview-link">
+			Please try <a href="https://botpreview.com?ref=fbmessenger" target="_blank">BotPreview.com</a> if you want to build bot mocks without any coding.
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				var now = new Date();
+				$('.screen-content').fbMessenger({
+						botName: 'Present Finder',
+						botBannerUrl: 'unsplash-presentfinder-banner-luca-upper.jpg',
+						botLogoUrl: 'botlogo-freepik.png',
+						botWelcomeMessage: 'Present Finder helps you finding lovely and unique gifts for any occasion. Just answer a few questions and you\'re all set!',
+						likes: {
+							totalCount: 25123,
+							friendName: 'John Doe',
+							otherFriendsCount: 42
+						}
+					})
+					.fbMessenger('start', { delay: 4000 } )
+					.fbMessenger('message', 'user', 'Get Started', { timestamp: now, delay: 250 })
+					.fbMessenger('typingIndicator', { delay: 500 })
+					.fbMessenger('message', 'bot', 'Hey there! I am Present Finder, your friendly bot to help you finding... well, you guessed it.', { timestamp: now, delay: 2000 })
+					.fbMessenger('typingIndicator', { delay: 3000 })
+					.fbMessenger('message', 'bot', 'Let\'s start with the basics, what\'s your budget? Select from the options below or enter an exact amount as a limit.', { timestamp: now, delay: 4000 })
+					.fbMessenger('showQuickReplies', [
+						'Less than 5$',
+						'Up to 20$',
+						'Up to 50$',
+						'Up to 100$',
+						'Money doesn\'t matter.'
+					], { timestamp: now, delay: 0 })
+					.fbMessenger('scrollQuickReplies', 3, { delay: 4000 })
+					.fbMessenger('scrollQuickReplies', 0, { delay: 1000 })
+					.fbMessenger('scrollQuickReplies', 4, { delay: 1000 })
+					.fbMessenger('selectQuickReply', 4, { delay: 1000 })
+					.fbMessenger('typingIndicator', { delay: 1000 })
+					.fbMessenger('message', 'bot', 'Best thing I\'ve heard today!', { timestamp: now, delay: 1000 })
+					.fbMessenger('typingIndicator', { delay: 500 })
+					.fbMessenger('message', 'bot', 'Let\'s narrow things down. What\'s the occasion?', { timestamp: now, delay: 1000 })
+					.fbMessenger('showGenericTemplate', [
+						{
+							imageUrl: 'unsplash-birthday-annie-spratt.jpg',
+							title: 'Birthday',
+							subtitle: 'Find presents for a birthday.',
+							buttons: [
+								'Select Birthday'
+							]
+						},
+						{
+							imageUrl: 'unsplash-christmas-darren-coleshill.jpg',
+							title: 'Christmas',
+							subtitle: 'Find seasonal presents for Christmas.',
+							buttons: [
+								'Select Christmas'
+							]
+						},
+						{
+							imageUrl: 'unsplash-wedding-anne-edgar.jpg',
+							title: 'Wedding',
+							subtitle: 'Find presents for bride and groom.',
+							buttons: [
+								'Select Wedding'
+							]
+						}
+					], { timestamp: now, delay: 2000 })
+					.fbMessenger('scrollGenericTemplate', 1, { delay: 1000 })
+					.fbMessenger('scrollGenericTemplate', 2, { delay: 1000 })
+					.fbMessenger('scrollGenericTemplate', 1, { delay: 1000 })
+					.fbMessenger('selectGenericTemplate', 0, { delay: 1000 })
+					.fbMessenger('typingIndicator', { delay: 500 })
+					.fbMessenger('message', 'bot', 'Awwww... so it\'s that time of the year again! 🎅🎄🎁', { timestamp: now, delay: 2000 })
+					.fbMessenger('typingIndicator', { delay: 500 })
+					.fbMessenger('showButtonTemplate', 'Who\'s the present for?', [
+						'Significant Other',
+						'Family or close friend',
+						'Acquaintance or colleague',
+						'Business partner'
+					], { timestamp: now, delay: 1000})
+
+					.fbMessenger('message', 'user', 'One more time!', { timestamp: now, delay: 5000 })
+					.fbMessenger('run');
+			});
+		</script>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-81248644-3', 'auto');
+			ga('set', 'anonymizeIp', true);
+			ga('send', 'pageview');
+		</script>
+	</body>
 </html>

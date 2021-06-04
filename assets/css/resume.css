@@ -1,0 +1,210 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+.emp {
+    background: #434753;
+    padding: 55px 87px;
+    color: #ffffff;
+}
+.emp_name h1 {
+    font-size: 60px;
+    color: #ffffff;
+}
+.emp_name p {
+    font-size: 32px;
+    color: #ffffff;
+}
+.emp_career p {
+    font-size: 26px;
+    margin: 0;
+    padding: 20px 20px 20px 0px;
+}
+.emp_data {
+    padding: 20px 70px 0 70px;
+}
+.personal_info {
+    padding: 25px 50px;
+    background: #e4e4e4;
+}
+.personal_data h2 {
+    font-size: 24px;
+}
+.personal_head {
+    border-bottom: 2px solid #dadada;
+}
+.personal_data p {
+    font-size: 22px;
+}
+.color {
+    color: black;
+}
+.emp_education_headding {
+    border-bottom: 2px solid #dadada;
+}
+.emp_education_data {
+    font-size: 22px;
+    margin: 0;
+}
+.emp_experience_data ul li {
+    font-size: 22px;
+}
+.emp_experience_desc ul li {
+    font-size: 22px;
+}
+.pwa p {
+    font-size: 22px;
+    margin: 0;
+}
+.list {
+    list-style: decimal;
+}
+.emp_extra {
+    border-bottom: 2px solid #dadada;
+}
+.emp_data_padd {
+    padding: 20px 70px 0 70px;
+}
+.thanks {
+    padding-top: 155px;
+    padding-right: 100px;
+}
+
+/* @media print {  
+    @page {
+      size: 450mm 596mm; 
+      margin: 0mm 0 12mm 0;
+    }
+  } */
+@media print {  
+    @page {
+      size: 450mm 600mm; 
+    }
+    .padd_printe{
+        margin-bottom: 60px;
+    }
+    .padd_top{
+        margin-top: 50px;
+    }
+  }
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+    .emp_data {
+        padding: 20px 20px 0 20px;
+    }
+    .emp {
+        padding: 55px 42px;
+    }
+    .personal_info {
+        padding: 20px 20px;
+    }
+    .thanks {
+        padding-top: 155px;
+        padding-right: 50px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .emp_data {
+        padding: 20px 35px;
+    }
+    .thanks {
+        padding-top: 100px;
+        padding-right: 10px;
+    }
+    .emp {
+        padding: 55px 53px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .emp {
+        background: #434753;
+        padding: 50px 32px;
+    }
+    .emp_name h1 {
+        font-size: 50px;
+        color: #ffffff;
+    }
+    .emp_career p {
+        font-size: 20px;
+        padding: 0;
+    }
+    .emp_data {
+        padding: 0 15px;
+    }
+    .emp_education_data {
+        font-size: 18px;
+        margin: 0;
+    }
+    .emp_experience_data ul li {
+        font-size: 18px;
+    }
+    .pwa p {
+        font-size: 18px;
+    }
+    .personal_info {
+        padding: 25px 45px;
+    }
+    .personal_data h2 {
+        font-size: 22px;
+    }
+    .personal_data p {
+        font-size: 19px;
+    }
+    .emp_experience_desc ul li {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .thanks {
+        padding-top: 120px;
+        padding-right: 10px;
+    }
+}
+@media screen and (max-width: 475px){
+    .emp_name h1 {
+        font-size: 35px;
+    }
+    .emp_name p {
+        font-size: 20px;
+    }
+    .emp {
+        padding: 30px 15px;
+    }
+    .emp_data {
+        padding: 0px;
+    }
+    .emp_career p {
+        font-size: 18px;
+        padding: 0;
+    }
+    .emp_education_data {
+        font-size: 14px;
+    }
+    .emp_experience_data ul li {
+        font-size: 14px;
+    }
+    .pwa p {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .personal_data h2 {
+        font-size: 18px;
+    }
+    .personal_data p {
+        font-size: 16px;
+    }
+    .personal_info {
+        padding: 25px;
+    }
+    .emp_experience_desc ul li {
+        font-size: 14px;
+    }
+    .thanks {
+        padding-top: 70px;
+        padding-right: 0;
+    }
+}

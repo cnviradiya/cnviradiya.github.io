@@ -35,7 +35,7 @@ body {
     border-bottom: 2px solid #dadada;
 }
 .personal_data p {
-    font-size: 22px;
+    font-size: 20px;
 }
 .color {
     color: black;
@@ -44,17 +44,18 @@ body {
     border-bottom: 2px solid #dadada;
 }
 .emp_education_data {
-    font-size: 22px;
+    font-size: 20px;
     margin: 0;
 }
+.pagebreak { page-break-before: always; }
 .emp_experience_data ul li {
-    font-size: 22px;
+    font-size: 20px;
 }
 .emp_experience_desc ul li {
-    font-size: 22px;
+    font-size: 20px;
 }
 .pwa p {
-    font-size: 22px;
+    font-size: 20px;
     margin: 0;
 }
 .list {
